@@ -770,6 +770,7 @@ public abstract class Model<M extends Model<M,P,O>, P extends Model.Parameters, 
     Vec vvecs[] = new Vec[names.length];
     int good = 0;               // Any matching column names, at all?
     int convNaN = 0;
+
     for( int i=0; i<names.length; i++ ) {
       Vec vec = test.vec(names[i]); // Search in the given validation set
       // For supervised problems, if the test set has no response, then we don't fill that in with NAs.

@@ -169,7 +169,6 @@ abstract public class ModelBuilder<M extends Model<M,P,O>, P extends Model.Param
       } finally {
         setFinalState();
         _parms.read_unlock_frames(_job);
-        if (!_parms._is_cv_model) cleanUp(); //cv calls cleanUp on its own terms
         Scope.exit();
       }
       tryComplete();
